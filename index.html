@@ -1,25 +1,43 @@
-<!DOCTYPE html>
+<! DOCTYPE html>
+
 <html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
   <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pharmacy</title>
   </head>
+
   <body>
+    <h1>inventorys</h1>
+    <hr />
+    <form action="process-form.php" method="post"></form>
+    <label for="id"> MED ID (1 to 10 characters):</label>
+    <input
+      type="TEXT"
+      id="id"
+      name=" medid"
+      minlength="1"
+      maxlength="10"
+      size="15"
+    />
+    <hr />
+    <label for="TEXT"> MED name:</label>
+    <input type="TEXT" id="TEXT" name="MEDNAME" maxlength="35" size="35" />
+    <hr />
 
+    <input type="radio" id="tobuy" value="tobuy" name="med _type" /><label
+      for="tobuy"
+      class="light"
+      >tobuy</label
+    >
 
-    <input  class="input" placeholder="Type here...">
-
-    <button class="btn">Hover</button>
-
-    <p>hi there with the first change</p>
-   
-
-
-
-
-
-
+    <label for="amount">amount</label>
+    <input type="number" id="amount" name=" MEDAMOUNT" />
+    <hr />
+    <label for="expiry"> expiry date</label>
+    <input type="date" id="expiry" name="EXPIRY" />
+    <hr />
+    <button>SEND</button>
   </body>
 </html>
