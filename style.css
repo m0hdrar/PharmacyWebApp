@@ -1,9 +1,21 @@
-.btn {
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.dark-mode {
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
+button {
   transition: all 0.3s ease-in-out;
   font-family: "Dosis", sans-serif;
 }
 
-.btn {
+button {
   width: 100px;
   height: 50px;
   border-radius: 50px;
@@ -16,24 +28,23 @@
   color: white;
 }
 
-.btn:hover {
+button:hover {
   transform: translateY(3px);
   box-shadow: none;
 }
 
-.btn:active {
+button:active {
   opacity: 0.5;
 }
-.input {
+input {
   border: none;
   padding: 1rem;
   border-radius: 1rem;
   background: #e8e8e8;
-  box-shadow: 20px 20px 60px #c5c5c5, -20px -20px 60px #ffffff;
-  transition: 0.3s;
+    transition: 0.3s;
 }
 
-.input:focus {
+input:focus {
   outline-color: #e8e8e8;
   background: #e8e8e8;
   box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;

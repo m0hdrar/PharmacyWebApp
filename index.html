@@ -3,15 +3,18 @@
 <html lang="en">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-
   <head>
     <title>Pharmacy</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/94eeb249ee.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="dark-mode" >
+    <button  onclick="darkToggle()"><i class="fa-regular fa-sun"></i></button>
+
     <h1>inventorys</h1>
-    <hr />
-    <form action="process-form.php" method="post"></form>
+    <form></form>
     <label for="id"> MED ID (1 to 10 characters):</label>
     <input
       type="TEXT"
@@ -20,11 +23,11 @@
       minlength="1"
       maxlength="10"
       size="15"
+      placeholder="Type here..."
     />
-    <hr />
+
     <label for="TEXT"> MED name:</label>
-    <input type="TEXT" id="TEXT" name="MEDNAME" maxlength="35" size="35" />
-    <hr />
+    <input type="TEXT" id="TEXT" name="MEDNAME" maxlength="35" size="35"  placeholder="Type here..." />
 
     <input type="radio" id="tobuy" value="tobuy" name="med _type" /><label
       for="tobuy"
@@ -33,11 +36,10 @@
     >
 
     <label for="amount">amount</label>
-    <input type="number" id="amount" name=" MEDAMOUNT" />
-    <hr />
+    <input type="number" id="amount" name=" MEDAMOUNT"   placeholder="Type here..."/>
+
     <label for="expiry"> expiry date</label>
     <input type="date" id="expiry" name="EXPIRY" />
-    <hr />
-    <button>SEND</button>
+    <button>Save</button>
   </body>
 </html>
