@@ -1,0 +1,13 @@
+{
+  "name": "pharmacy-web-app",
+  "version": "1.0.0",
+  "description": "pharmacy app",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "moh",
+  "license": "ISC"
+}

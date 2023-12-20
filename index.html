@@ -7,8 +7,10 @@
     <title>Pharmacy</title>
     <link rel="stylesheet" href="style.css" />
     <script src="app.js"></script>
+
+    <script type="module" src="firebase.js"></script>
+
     <script
-      type="module"
       src="https://kit.fontawesome.com/94eeb249ee.js"
       crossorigin="anonymous"
     ></script>
@@ -17,39 +19,39 @@
   <body class="dark-mode">
     <h1>INVENTORY</h1>
     <form></form>
-    <label for="id"> MED ID :</label>
+    <label for="medId"> MED ID :</label>
     <input
       type="TEXT"
-      id="id"
-      name=" medid"
+      id="medId"
+      name=" medId"
       minlength="1"
       maxlength="10"
       size="15"
       placeholder="Type here..."
     />
 
-    <label for="TEXT"> MED name :</label>
+    <label for="medName"> MED name :</label>
     <input
       type="TEXT"
-      id="TEXT"
-      name="MEDNAME"
+      id="medName"
+      name="medName"
       maxlength="35"
       size="35"
       placeholder="Type here..."
     />
 
-    <label for="amount">Amount :</label>
+    <label for="medAmount">Amount :</label>
     <input
       type="number"
-      id="amount"
-      name=" MEDAMOUNT"
+      id="medAmount"
+      name="medAmount"
       placeholder="Type here..."
     />
 
-    <label for="expiry"> Expiry Date :</label>
-    <input type="date" id="expiry" name="EXPIRY" />
+    <label for="medExpiryDate"> Expiry Date :</label>
+    <input type="date" id="medExpiryDate" name="medExpiryDate" />
     <button id="save-btn">Save</button>
-    <button title="dark-toggle" id="dark-btn" onclick="darkToggle()">
+    <button id="dark-btn" title="dark-toggle" onclick="darkToggle()">
       <i class="fa-regular fa-sun"></i>
     </button>
   </body>
