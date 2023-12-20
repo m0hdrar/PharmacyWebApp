@@ -51,6 +51,30 @@
     <label for="medExpiryDate"> Expiry Date :</label>
     <input type="date" id="medExpiryDate" name="medExpiryDate" />
     <button id="save-btn">Save</button>
+    <div id="searchPart">
+      <h2>Search by ID</h2>
+      <input
+        type="text"
+        id="searchId"
+        name="searchId"
+        placeholder="Type here..."
+      />
+      <button id="search-btn">Search</button>
+      <div id="search-result"></div>
+    </div>
+
+    <div id="updatePart">
+      <h2>Update</h2>
+      <input
+        type="text"
+        id="updateId"
+        name="updateId"
+        placeholder="Type here..."
+      />
+
+      <button id="update-btn">Update</button>
+    </div>
+
     <button id="dark-btn" title="dark-toggle" onclick="darkToggle()">
       <i class="fa-regular fa-sun"></i>
     </button>
