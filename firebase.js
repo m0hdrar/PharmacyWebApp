@@ -46,7 +46,7 @@ function searchData() {
     .then((snapshot) => {
       if (snapshot.exists()) {
         searchResult.innerHTML = `<p> name:  ${snapshot.val().medName} </p>`;
-        searchResult.innerHTML+= `<p> amount:  ${
+        searchResult.innerHTML += `<p> amount:  ${
           snapshot.val().medAmount
         } </p>`;
         searchResult.innerHTML += `<p> expiryDate:  ${

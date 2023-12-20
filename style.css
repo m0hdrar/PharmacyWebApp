@@ -27,7 +27,6 @@ body {
 button {
   transition: all 0.3s ease-in-out;
   font-family: "Dosis", sans-serif;
-  
 }
 
 button {
@@ -42,7 +41,6 @@ button {
   font-size: 24px;
   color: white;
   text-align: center;
-  
 }
 
 button:hover {
