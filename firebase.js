@@ -31,8 +31,15 @@ function addData() {
     medAmount: amount.value,
     medExpiryDate: expiry.value,
   });
+  clearInputFieldEl(expiry)
+  clearInputFieldEl(amount)
+  clearInputFieldEl(name)
+  clearInputFieldEl(id)
 }
 
 saveBtn.addEventListener("click", addData);
 
 console.log("firebase.js loaded");
+function clearInputFieldEl(inputFieldEl) {
+  inputFieldEl.value = ""
+}
