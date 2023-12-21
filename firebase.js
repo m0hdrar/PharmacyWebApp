@@ -33,7 +33,7 @@ let companName = document.getElementById("companyName");
 let formula = document.getElementById("formulation");
 let badge = document.getElementById("bdgId");
 let price = document.getElementById("medPrice");
-
+let searchName = document.getElementById("searchName");
 let searchBtn = document.getElementById("search-btn");
 let searchResult = document.getElementById("search-result");
 let searchBtnName = document.getElementById("search-btnName");
@@ -75,7 +75,9 @@ function searchData() {
         searchResult.innerHTML += `<p> expiryDate:  ${
           snapshot.val().medExpiryDate
         } </p>`;
-        searchResult.innerHTML += `<p> sinName:  ${snapshot.val().sinName} </p>`;
+        searchResult.innerHTML += `<p> sinName:  ${
+          snapshot.val().sinName
+        } </p>`;
         searchResult.innerHTML += `<p> companyName:  ${
           snapshot.val().companyName
         } </p>`;
@@ -83,7 +85,9 @@ function searchData() {
           snapshot.val().formulation
         } </p>`;
         searchResult.innerHTML += `<p> bdgId:  ${snapshot.val().bdgId} </p>`;
-        searchResult.innerHTML += `<p> medprice:  ${snapshot.val().medprice} </p>`;
+        searchResult.innerHTML += `<p> medprice:  ${
+          snapshot.val().medprice
+        } </p>`;
         searchResult.innerHTML += `<p> totalPrice:  ${
           snapshot.val().totalPrice
         } </p>`;
@@ -103,19 +107,19 @@ function searchDataName() {
     if (snapshot.exists()) {
       const allMeds = snapshot.val();
       const medId = Object.keys(allMeds).find(
-        (id) => allMeds[id].comName === searchBtnName.value
+        (id) => allMeds[id].comName === searchName.value
       );
 
       if (medId) {
         const med = allMeds[medId];
-        searchResultName.innerHTML = `<p> name:  ${med.comName} </p>`;
+        //searchResultName.innerHTML = `<p> commercial name:  ${med.comName} </p>`;
         searchResultName.innerHTML += `<p> amount:  ${med.medAmount} </p>`;
         searchResultName.innerHTML += `<p> expiryDate:  ${med.medExpiryDate} </p>`;
-        searchResultName.innerHTML += `<p> sinName:  ${med.sinName} </p>`;
-        searchResultName.innerHTML += `<p> companyName:  ${med.companyName} </p>`;
+        searchResultName.innerHTML += `<p> scintific Name:  ${med.sinName} </p>`;
+        searchResultName.innerHTML += `<p> company Name:  ${med.companyName} </p>`;
         searchResultName.innerHTML += `<p> formulation:  ${med.formulation} </p>`;
-        searchResultName.innerHTML += `<p> bdgId:  ${med.bdgId} </p>`;
-        searchResultName.innerHTML += `<p> medprice:  ${med.medprice} </p>`;
+        searchResultName.innerHTML += `<p> Badge:  ${med.bdgId} </p>`;
+        searchResultName.innerHTML += `<p> price:  ${med.medprice} </p>`;
         searchResultName.innerHTML += `<p> totalPrice:  ${med.totalPrice} </p>`;
         // searchResultName.innerHTML += `<p> id:  ${med.medId} </p>`;
       } else {
@@ -123,6 +127,7 @@ function searchDataName() {
       }
     }
   });
+  // clearInputFieldEl(comName);
 }
 
 function clearInputFieldEl(inputFieldEl) {
