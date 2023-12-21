@@ -26,7 +26,7 @@ const db = getDatabase(app);
 let saveBtn = document.getElementById("save-btn");
 let expiry = document.getElementById("medExpiryDate");
 let amount = document.getElementById("medAmount");
-let comName = document.getElementById("comName");
+let comrName = document.getElementById("comName");
 let id = document.getElementById("medId");
 let scintificName = document.getElementById("sinName");
 let companName = document.getElementById("companyName");
@@ -42,7 +42,7 @@ let updateBtn = document.getElementById("update-btn");
 let removeBtn = document.getElementById("remove-btn");
 function addData() {
   set(ref(db, "med/" + id.value), {
-    comName: comName.value,
+    comName: comrName.value,
     medAmount: amount.value,
     medExpiryDate: expiry.value,
     sinName: scintificName.value,
@@ -54,7 +54,7 @@ function addData() {
   });
   clearInputFieldEl(expiry);
   clearInputFieldEl(amount);
-  clearInputFieldEl(comName);
+  clearInputFieldEl(comrName);
   clearInputFieldEl(id);
   clearInputFieldEl(scintificName);
   clearInputFieldEl(companName);
@@ -68,7 +68,7 @@ function searchData() {
   get(child(medRef, "med/" + searchId.value))
     .then((snapshot) => {
       if (snapshot.exists()) {
-        searchResult.innerHTML = `<p> name:  ${snapshot.val().comName} </p>`;
+        searchResult.innerHTML = `<p> name:  ${snapshot.val().comrName} </p>`;
         searchResult.innerHTML += `<p> amount:  ${
           snapshot.val().medAmount
         } </p>`;
@@ -107,7 +107,7 @@ function searchDataName() {
     if (snapshot.exists()) {
       const allMeds = snapshot.val();
       const medId = Object.keys(allMeds).find(
-        (id) => allMeds[id].comName === searchName.value
+        (id) => allMeds[id].comrName === searchName.value
       );
 
       if (medId) {
@@ -141,6 +141,9 @@ function updateData() {
     medExpiryDate: expiry.value,
     medprice: price.value,
     totalPrice: price.value * amount.value,
+    bdgId: badge.value,
+    comName: comrName.value,
+    companyName: companName.value,
   })
     .then(() => {
       alert("Data updated successfully");
@@ -150,7 +153,7 @@ function updateData() {
     });
   clearInputFieldEl(expiry);
   clearInputFieldEl(amount);
-  clearInputFieldEl(comName);
+  clearInputFieldEl(comrName);
   clearInputFieldEl(id);
   clearInputFieldEl(scintificName);
   clearInputFieldEl(companName);
