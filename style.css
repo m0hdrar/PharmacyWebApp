@@ -116,3 +116,7 @@ input:focus {
   justify-content: center;
   gap: 5px;
 }
+#medExpiryDate{
+  height: 50px;
+  width: 170px;
+}
