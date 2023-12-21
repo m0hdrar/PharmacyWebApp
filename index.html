@@ -22,49 +22,113 @@
 
   <body class="dark-mode">
     <h1>INVENTORY</h1>
-    <form></form>
-    <label for="medId"> MED ID :</label>
-    <input
-      type="TEXT"
-      id="medId"
-      name=" medId"
-      minlength="1"
-      maxlength="10"
-      size="15"
-      placeholder="Type here..."
-    />
-
-    <label for="medName"> MED name :</label>
-    <input
-      type="TEXT"
-      id="medName"
-      name="medName"
-      maxlength="35"
-      size="35"
-      placeholder="Type here..."
-    />
-
-    <label for="medAmount">Amount :</label>
-    <input
-      type="number"
-      id="medAmount"
-      name="medAmount"
-      placeholder="Type here..."
-    />
-
-    <label for="medExpiryDate"> Expiry Date :</label>
-    <input type="date" id="medExpiryDate" name="medExpiryDate" />
-    <button id="save-btn">Save</button>
-    <div id="searchPart">
-      <h2>Search by ID</h2>
+   
+      <label for="medId"> MED ID :</label>
       <input
-        type="text"
-        id="searchId"
-        name="searchId"
+        type="TEXT"
+        id="medId"
+        name=" medId"
+        minlength="1"
+        maxlength="10"
+        size="15"
         placeholder="Type here..."
       />
-      <button id="search-btn">Search</button>
-      <div id="search-result"></div>
+
+      <label for="commercial-Name"> commercial name :</label>
+      <input
+        type="TEXT"
+        id="comName"
+        name="comName"
+        maxlength="35"
+        size="35"
+        placeholder="Type here..."
+      />
+
+      <label for="sinName "> scientific name :</label>
+      <input
+        type="TEXT"
+        id="sinName"
+        name="sinName"
+        maxlength="35"
+        size="35"
+        placeholder="Type here..."
+      />
+      <label for="companyName "> company name :</label>
+      <input
+        type="TEXT"
+        id="companyName"
+        name="companyName"
+        maxlength="35"
+        size="35"
+        placeholder="Type here..."
+      />
+      <label for="formulation "> Formulation:</label>
+      <input
+        type="TEXT"
+        id="formulation"
+        name="formulation"
+        maxlength="35"
+        size="35"
+        placeholder="Type here..."
+      />
+      <label for="badgId"> Badge Number :</label>
+      <input
+        type="TEXT"
+        id="bdgId"
+        name=" bdgId"
+        minlength="1"
+        maxlength="10"
+        size="15"
+        placeholder="Type here..."
+      />
+
+      <label for="medAmount">Amount :</label>
+      <input
+        type="number"
+        id="medAmount"
+        name="medAmount"
+        placeholder="Type here..."
+      />
+      <label for="medPrice">price :</label>
+      <input
+        type="number"
+        id="medPrice"
+        name="medPrice"
+        placeholder="Type here..."
+      />
+
+      <label for="medExpiryDate"> Expiry Date :</label>
+      <input type="date" id="medExpiryDate" name="medExpiryDate" />
+      <div id="btns">
+        <button id="save-btn">Save</button>
+        <button id="update-btn">Update</button>
+        <button id="remove-btn">Remove</button>
+      </div>
+    
+    <br />
+    <div id="searchParts">
+      <div id="searchPartId">
+        <h2>Search by ID</h2>
+        <input
+          type="text"
+          id="searchId"
+          name="searchId"
+          placeholder="Type here..."
+        />
+        <button id="search-btn">Search</button>
+        <div id="search-result"></div>
+      </div>
+      <div id="searchPartName">
+        <h2>Search by name</h2>
+        <input
+          type="text"
+          id="searchName"
+          name="searchName"
+          placeholder="Type here..."
+        />
+        <button id="search-btnName">Search</button>
+        <div id="search-resultName"></div>
+      </div>
     </div>
 
     <button id="dark-btn" title="dark-toggle" onclick="darkToggle()">
