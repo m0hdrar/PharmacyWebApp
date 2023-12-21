@@ -68,7 +68,7 @@ function searchData() {
   get(child(medRef, "med/" + searchId.value))
     .then((snapshot) => {
       if (snapshot.exists()) {
-        searchResult.innerHTML = `<p> name:  ${snapshot.val().comrName} </p>`;
+        searchResult.innerHTML = `<p> commercial name:  ${snapshot.val().comName} </p>`;
         searchResult.innerHTML += `<p> amount:  ${
           snapshot.val().medAmount
         } </p>`;
@@ -107,13 +107,13 @@ function searchDataName() {
     if (snapshot.exists()) {
       const allMeds = snapshot.val();
       const medId = Object.keys(allMeds).find(
-        (id) => allMeds[id].comrName === searchName.value
+        (id) => allMeds[id].comName === searchName.value
       );
 
       if (medId) {
         const med = allMeds[medId];
         //searchResultName.innerHTML = `<p> commercial name:  ${med.comName} </p>`;
-        searchResultName.innerHTML += `<p> amount:  ${med.medAmount} </p>`;
+        searchResultName.innerHTML = `<p> amount:  ${med.medAmount} </p>`;
         searchResultName.innerHTML += `<p> expiryDate:  ${med.medExpiryDate} </p>`;
         searchResultName.innerHTML += `<p> scintific Name:  ${med.sinName} </p>`;
         searchResultName.innerHTML += `<p> company Name:  ${med.companyName} </p>`;
